@@ -1,0 +1,13 @@
+# probe-db built from this checkout, for the workflows of e2e. Probe resolves
+# an action before the first job starts, so the executable is built before
+# probe runs:
+#
+#   go build -o e2e/action/probe-db . && probe e2e/sqlite.yml
+name: db
+description: Run SQL against MySQL, PostgreSQL and SQLite
+guard: [read-only, allow-host]
+params: [driver, dsn, query, params, timeout]
+res: [code, rows_affected, rows, error]
+runs:
+  using: binary
+  path: probe-db

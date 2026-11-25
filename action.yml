@@ -1,0 +1,8 @@
+name: db
+description: Run SQL against MySQL, PostgreSQL and SQLite
+guard: [read-only, allow-host]
+params: [driver, dsn, query, params, timeout]
+res: [code, rows_affected, rows, error]
+runs:
+  using: binary
+  url: https://github.com/mozership/probe-db/releases/download/v0.0.0/probe-db_{os}_{arch}

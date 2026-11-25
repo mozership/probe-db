@@ -1,0 +1,5 @@
+/probe-db
+/dist/
+/e2e/action/probe-db
+/e2e/sqlite.db
+/THIRD_PARTY_LICENSES
