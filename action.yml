@@ -5,4 +5,9 @@ params: [driver, dsn, query, params, timeout]
 res: [code, rows_affected, rows, error]
 runs:
   using: binary
-  url: https://github.com/mozership/probe-db/releases/download/v0.0.0/probe-db_{os}_{arch}
+  url: https://github.com/mozership/probe-db/releases/download/v0.1.0/probe-db_{os}_{arch}
+  checksums:
+    darwin_amd64: "4289f101201a9fca4abd408927c4759771a54d3901b62d9d3b6c05d2d44a6a83"
+    darwin_arm64: "12a2145c37046ff879d56d859b8746176c9b64ce8172160a41a8230060e2435d"
+    linux_amd64: "55839e63155f82cb1957bb5bed90574c54b3e55b69271d0a73476e9eb8d7e4c6"
+    linux_arm64: "4761135e76278e96fd01cffc41e45fc13953582206e2536f8ebdd27684cbf6df"
