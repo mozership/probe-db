@@ -16,6 +16,12 @@ jobs:
           go-version-file: go.mod
       - run: go vet ./...
       - run: go test -race ./...
+      # Releases are built without cgo, which the SQLite of modernc.org does
+      # without.
+      - name: go test without cgo, as releases are built
+        run: go test ./...
+        env:
+          CGO_ENABLED: "0"
 
   # The action run through Probe against SQLite, PostgreSQL and MySQL, and
   # again under --read-only, where a statement that writes is refused, and
